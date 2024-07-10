@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,500;0,700;1,500;1,700&family=Kumbh+Sans:wght@400;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="shortcut icon" href="images/favicon-32x32.png" type="image/png">
+<link rel="stylesheet" href="page.css">
+<script defer src="main.js"></script>
+<title>Document</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <div >
+            <img class="menu-icon"  src="images/icon-menu.svg" alt="">
+        </div>
+            <img src="images/logo.svg" alt=""></div>
+        <div class="nav">
+            <ul>
+                <li><img class="close-menu" src="images/icon-close.svg"  style="display: none;" alt=""></li>
+                <li> <a href="">Collection</a> </li>
+                <li> <a href="">Men</a> </li>
+                <li> <a href="">Women</a> </li>
+                <li> <a href="">About</a> </li>
+                <li> <a href="">Contact</a> </li>
+            </ul>
+        </div>
+        <div class="user-profile">
+            <ul>
+                <li id="carti" data-count="0"  onclick="displayCart()"> <a href="#"> <img width="40" src="images/icon-cart.svg"  alt=""> </a>
+                    <div id="carti-id" class="cart-basket ">
+                        <div class="cart-description">
+                           <h3>cart</h3> 
+                        </div>
+                        <hr>
+                        <div class="cart-basket-price ">
+                            <p>Your cart is empty</p>
+                        
+                    </div>
+                  
+                     
+                 </div>
+                 <div id="cartAmount" class="cart-basket-fill">
+                 <div class="cart-description">
+                    <h3>cart</h3> 
+                 </div>
+                 <hr>
+                 <div class="cart-basket-filled ">
+                    <div >
+                    <img class="cart-image" src="images/image-product-1-thumbnail.jpg" alt="">
+                 </div>
+                    <div >
+                        <p>Fall Limited Edition Sneaker</p>
+                        <span>150.00</span> <span>X</span>
+                    <span style="background-color: white; padding:0;" id="quantity">0</span>  <span id="total" style="font-weight: bold; color:black;"></span>
+                </div>
+                <div class="cart-delete">
+                    <img src="images/icon-delete.svg" id="delete"  alt="" width="20">
+                </div>
+                <button class="checkout">Checkout</button>
+                </li>
+                <li class="user"> <a href=""> <img src="images/image-avatar.png" alt="" class="avatar"> </a> </li>
+            </ul>
+        </div>
+    </header>
+    <main id="product-display-container">
+        <div class="product-display">
+            <img src="images/image-product-1.jpg" alt="" width="430" class="product">
+            <div>
+                <img src="images/image-product-1-thumbnail.jpg" alt="" width="80" class="product-thumbnail">
+                <img src="images/image-product-2-thumbnail.jpg" alt="" width="80" class="product-thumbnail">
+                <img src="images/image-product-3-thumbnail.jpg" alt="" width="80" class="product-thumbnail">
+                <img src="images/image-product-4-thumbnail.jpg" alt="" width="80" class="product-thumbnail">
+            </div>
+        </div>
+
+        <div class="main">
+        <div class="imageproducts">
+            <button id="previous">
+                <img src="images/icon-previous.svg" alt="">
+            </button>
+            <div class="image-track-container">
+                <div class="close_icon">
+                    <img src="images/icon-close.svg" alt="">
+                </div>
+            <ul class="image-track">
+                <li class="slide current-slide"><img src="images/image-product-1.jpg"  class="images" alt="" ></li>
+                <li class="slide "><img src="images/image-product-2.jpg" alt="" class="images" ></li>
+                <li class="slide "><img src="images/image-product-3.jpg" alt=""  class="images"></li>
+                <li class="slide "><img src="images/image-product-4.jpg" alt=""  class="images"></li>
+            </ul>
+        </div>
+   
+            <button id="next">
+            <img src="images/icon-next.svg" alt="">
+        </button>
+    </div>
+        </div>
+
+        <div class="product-details">
+            
+            <h5>SNEAKER EDITION</h5>
+            <h1>
+                Fall Limited Edition Sneaker
+            </h1>
+            <p>These low-profile sneakers are your perfect casual wear
+                companion. Featuring a durable rubber outer sole,they'll
+                with stand anything the weather can offer
+            </p>
+            <div class="discount">
+            <h3>$150.00 <span>50%</span></h3> 
+            <p class="price-tag">$250.00</p>
+        </div>
+            <div class="select">
+            <div>    <button onclick="increaseAmount()" class="left-button" value="left"><img src="images/icon-plus.svg" alt=""></button><span id="amount">0</span> <button onclick="decreaseAmount()" class="right-button"> <img src="images/icon-minus.svg" alt=""> </button></div>  <button class="addtocart"><img src="images/icon-cart.svg" alt=""> Add to cart</button>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.min.js"></script>
+    <script>
+        /*const $increaseButton = $('.left-button')
+      $increaseButton.on('click',()=>{
+        let count = Number($('#carti::before').attr('data-count'))
+        count +=1
+        
+        })*/
+    </script>
+</body>
+</html>
