@@ -6,6 +6,7 @@ const mongoose = require("mongoose")
 const User = require("./user")
 const app = express()
 const path = require("path")
+const dotenv = require("dotenv")
 const port = 5000
 app.use(express.json())
 
@@ -13,10 +14,12 @@ app.set('view engine', 'ejs')
 app.use(express.static(path.join(__dirname,'public'))); //ES5
 app.use(express.urlencoded({ extended: true }));
 
+dotenv.config()
+
 const uri = 'mongodb://localhost:27017/Client'
 
 
-mongoose.connect(uri,{
+mongoose.connect(process.env.DB_URL ,{
     useNewUrlParser: true,
     useUnifiedTopology: true,
 })
@@ -32,7 +35,7 @@ mongoose.connect(uri,{
 
 
   app.get('/',(req,res)=>{
-    
+     
     res.render('index')
     
   })
